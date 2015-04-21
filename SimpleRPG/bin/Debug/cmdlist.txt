@@ -1,0 +1,8 @@
+﻿List of commands
+----------------
+help - Displays this text
+game.exit - Exits the game
+clear - Clears the screen
+List of debug commands (If you don't know what your doing, stop)
+----------------------
+dbug.color.test - Test the availble colors

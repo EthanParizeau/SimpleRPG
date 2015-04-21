@@ -1,0 +1,7 @@
+﻿This is the list of things that need to be done :)
+
+GOLDEN RULE: Document everything, and keep it up.
+
+Update race descriptions
+
+Database class for simple database access, like getting all tables

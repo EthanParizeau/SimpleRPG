@@ -1,0 +1,1 @@
+Type "cmdhelp" for a list of commands

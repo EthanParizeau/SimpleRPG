@@ -85,7 +85,7 @@ namespace SimpleRPG
 									| System.Windows.Forms.AnchorStyles.Right)));
 			this.outputBox.BackColor = System.Drawing.Color.Black;
 			this.outputBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.outputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.outputBox.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.outputBox.ForeColor = System.Drawing.Color.White;
 			this.outputBox.Location = new System.Drawing.Point(12, 12);
 			this.outputBox.Name = "outputBox";
@@ -120,6 +120,7 @@ namespace SimpleRPG
 			// 
 			// playerGoldlbl
 			// 
+			this.playerGoldlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerGoldlbl.Location = new System.Drawing.Point(95, 16);
 			this.playerGoldlbl.Name = "playerGoldlbl";
 			this.playerGoldlbl.Size = new System.Drawing.Size(83, 23);
@@ -129,6 +130,7 @@ namespace SimpleRPG
 			// 
 			// playerManalbl
 			// 
+			this.playerManalbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerManalbl.Location = new System.Drawing.Point(6, 85);
 			this.playerManalbl.Name = "playerManalbl";
 			this.playerManalbl.Size = new System.Drawing.Size(83, 23);
@@ -138,6 +140,7 @@ namespace SimpleRPG
 			// 
 			// playerAgilitylbl
 			// 
+			this.playerAgilitylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerAgilitylbl.Location = new System.Drawing.Point(6, 223);
 			this.playerAgilitylbl.Name = "playerAgilitylbl";
 			this.playerAgilitylbl.Size = new System.Drawing.Size(83, 23);
@@ -147,6 +150,7 @@ namespace SimpleRPG
 			// 
 			// playerDefencelbl
 			// 
+			this.playerDefencelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerDefencelbl.Location = new System.Drawing.Point(6, 200);
 			this.playerDefencelbl.Name = "playerDefencelbl";
 			this.playerDefencelbl.Size = new System.Drawing.Size(83, 23);
@@ -156,6 +160,7 @@ namespace SimpleRPG
 			// 
 			// playerIntellectlbl
 			// 
+			this.playerIntellectlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerIntellectlbl.Location = new System.Drawing.Point(6, 177);
 			this.playerIntellectlbl.Name = "playerIntellectlbl";
 			this.playerIntellectlbl.Size = new System.Drawing.Size(83, 23);
@@ -165,6 +170,7 @@ namespace SimpleRPG
 			// 
 			// playerStrengthlbl
 			// 
+			this.playerStrengthlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerStrengthlbl.Location = new System.Drawing.Point(6, 154);
 			this.playerStrengthlbl.Name = "playerStrengthlbl";
 			this.playerStrengthlbl.Size = new System.Drawing.Size(83, 23);
@@ -174,6 +180,7 @@ namespace SimpleRPG
 			// 
 			// playerXPlbl
 			// 
+			this.playerXPlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerXPlbl.Location = new System.Drawing.Point(6, 131);
 			this.playerXPlbl.Name = "playerXPlbl";
 			this.playerXPlbl.Size = new System.Drawing.Size(83, 23);
@@ -183,6 +190,7 @@ namespace SimpleRPG
 			// 
 			// playerLevellbl
 			// 
+			this.playerLevellbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerLevellbl.Location = new System.Drawing.Point(6, 108);
 			this.playerLevellbl.Name = "playerLevellbl";
 			this.playerLevellbl.Size = new System.Drawing.Size(83, 23);
@@ -192,6 +200,7 @@ namespace SimpleRPG
 			// 
 			// playerHealthlbl
 			// 
+			this.playerHealthlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerHealthlbl.Location = new System.Drawing.Point(6, 62);
 			this.playerHealthlbl.Name = "playerHealthlbl";
 			this.playerHealthlbl.Size = new System.Drawing.Size(83, 23);
@@ -201,6 +210,7 @@ namespace SimpleRPG
 			// 
 			// playerClasslbl
 			// 
+			this.playerClasslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerClasslbl.Location = new System.Drawing.Point(6, 39);
 			this.playerClasslbl.Name = "playerClasslbl";
 			this.playerClasslbl.Size = new System.Drawing.Size(83, 23);
@@ -210,6 +220,7 @@ namespace SimpleRPG
 			// 
 			// playerRacelbl
 			// 
+			this.playerRacelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.playerRacelbl.Location = new System.Drawing.Point(6, 16);
 			this.playerRacelbl.Name = "playerRacelbl";
 			this.playerRacelbl.Size = new System.Drawing.Size(83, 23);

@@ -147,7 +147,7 @@ namespace SimpleRPG
 		public static void dumpAllItems()
 		{
 			MainForm.mainform.outputBox.AppendText("Dumping all items...\n");
-			MainForm.mainform.outputBox.AppendText("ID          |          Name          |          Type          |\n");
+			MainForm.mainform.outputBox.AppendText("ID                     Name                     Type           \n");
 			DataTable Armor_Helmet = Get_Armor_Helmet();
 			DataTable Armor_Chest = Get_Armor_Chest();
 			DataTable Armor_Legs = Get_Armor_Legs();
@@ -158,6 +158,7 @@ namespace SimpleRPG
 			DataTable Abilities_Mage = Get_Abilities_Mage();
 			DataTable Abilities_Rogue = Get_Abilities_Rogue();
 			
+			//Armor_Helmet
 			foreach(DataRow row in Armor_Helmet.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
@@ -165,6 +166,7 @@ namespace SimpleRPG
 				MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
 			}
 			
+			//Armor_Chest
 			foreach(DataRow row in Armor_Chest.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
@@ -172,6 +174,7 @@ namespace SimpleRPG
 				MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
 			}
 			
+			//Armor_Legs
 			foreach(DataRow row in Armor_Legs.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
@@ -179,36 +182,42 @@ namespace SimpleRPG
 				MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
 			}
 			
+			//Weapon_Sword
 			foreach(DataRow row in Weapon_Sword.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
 				MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
 			}
 			
+			//Weapon_Staff
 			foreach(DataRow row in Weapon_Staff.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
 				MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
 			}
 			
+			//Weapon_Dagger
 			foreach(DataRow row in Weapon_Dagger.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
 				MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
 			}
 			
+			//Abilities_Warrior
 			foreach(DataRow row in Abilities_Warrior.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
 				MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
 			}
 			
+			//Abilities_Mage
 			foreach(DataRow row in Abilities_Mage.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
 				MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
 			}
 			
+			//Abilities_Rogue
 			foreach(DataRow row in Abilities_Rogue.Rows)
 			{
 				MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
@@ -217,9 +226,95 @@ namespace SimpleRPG
 		}
 		
 		//Output items from given datatable to screen
-		public static void dumpItems(DataTable dt)
+		public static void dumpItems(string str)
 		{
-			//TODO:Dump givin datatable
+			MainForm.mainform.outputBox.AppendText("ID                     Name                     Type           \n");
+			switch(str) //Get which table to dump
+			{
+				case "Armor_Helmet":
+					DataTable Armor_Helmet = Get_Armor_Helmet();
+					foreach(DataRow row in Armor_Helmet.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
+					}
+					break;
+					
+				case "Armor_Chest":
+					DataTable Armor_Chest = Get_Armor_Chest();
+					foreach(DataRow row in Armor_Chest.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
+					}
+					break;
+					
+				case "Armor_Legs":
+					DataTable Armor_Legs = Get_Armor_Legs();
+					foreach(DataRow row in Armor_Legs.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Type"].ToString() + "\n");
+					}
+					break;
+					
+				case "Weapon_Sword":
+					DataTable Weapon_Sword = Get_Weapon_Sword();
+					foreach(DataRow row in Weapon_Sword.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+					
+				case "Weapon_Staff":
+					DataTable Weapon_Staff = Get_Weapon_Staff();
+					foreach(DataRow row in Weapon_Staff.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+					
+				case "Weapon_Dagger":
+					DataTable Weapon_Dagger = Get_Weapon_Dagger();
+					foreach(DataRow row in Weapon_Dagger.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+					
+				case "Abilities_Warrior":
+					DataTable Abilities_Warrior = Get_Abilities_Warrior();
+					foreach(DataRow row in Abilities_Warrior.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+					
+				case "Abilities_Mage":
+					DataTable Abilities_Mage = Get_Abilities_Mage();
+					foreach(DataRow row in Abilities_Mage.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+					
+				case "Abilities_Rogue":
+					DataTable Abilities_Rogue = Get_Abilities_Rogue();
+					foreach(DataRow row in Abilities_Rogue.Rows)
+					{
+						MainForm.mainform.outputBox.AppendText(row["ID"].ToString() + "\t");
+						MainForm.mainform.outputBox.AppendText(row["Name"].ToString() + "\n");
+					}
+					break;
+			}
 		}
 	}
 }

@@ -26,7 +26,7 @@ namespace SimpleRPG
 		
 		public MainForm()
 		{
-			 
+			
 			InitializeComponent();
 			mainform = this;
 			
@@ -42,22 +42,20 @@ namespace SimpleRPG
 			//Welcome and startup screen
 			outputBox.AppendText("Welcome to SimpleRPG!\n");
 			outputBox.AppendText("Created by: Armadow\n");
-			outputBox.AppendText("Github: https://github.com/Armadow\n");
-			/*
+			outputBox.AppendText("Github: https://github.com/Armadow\n\n");
+
 			outputBox.AppendText(" ######  #### ##     ## ########  ##       ######## ########  ########   ######    \n");
 			outputBox.AppendText("##    ##  ##  ###   ### ##     ## ##       ##       ##     ## ##     ## ##    ##   \n");
 			outputBox.AppendText("##        ##  #### #### ##     ## ##       ##       ##     ## ##     ## ##         \n");
 			outputBox.AppendText(" ######   ##  ## ### ## ########  ##       ######   ########  ########  ##   ####  \n");
 			outputBox.AppendText("      ##  ##  ##  #  ## ##        ##       ##       ##   ##   ##        ##    ##   \n");
 			outputBox.AppendText("##    ##  ##  ##     ## ##        ##       ##       ##    ##  ##        ##    ##   \n");
-			outputBox.AppendText(" ######  #### ##     ## ##        ######## ######## ##     ## ##         ######    \n");
-			 */
-			outputBox.AppendText("\n");
+			outputBox.AppendText(" ######  #### ##     ## ##        ######## ######## ##     ## ##         ######    \n\n");
+			
 			
 			LoadorCreate loadorcreate = new LoadorCreate(); //Make new instance of loadorcreate
-			loadorcreate.ShowDialog(); //Show it as dialog 
+			loadorcreate.ShowDialog(); //Show it as dialog
 			inputBox.Enabled = true; //Renable the input box
-			outputBox.Clear(); //Clear to get ready to start the game
 		}
 
 		void InputBoxKeyDown(object sender, KeyEventArgs e)
@@ -82,11 +80,15 @@ namespace SimpleRPG
 		void InputBoxLeave(object sender, EventArgs e) //When you click somwhere out of the textbox
 		{
 			inputBox.BorderStyle = BorderStyle.Fixed3D; //Set border style to fixed3d so you can see where the text box is
+			inputBox.ForeColor = Color.Red; //Set the text to red so it stands out
+			inputBox.Text = "Click here to use the text box..."; //Let the user know what they have to do to set focus back to the text box
 		}
 		
 		void InputBoxEnter(object sender, EventArgs e) //When you click back into the text box
 		{
 			inputBox.BorderStyle = BorderStyle.None; //Set border style to none so you can't see it
+			inputBox.Clear(); //Clear the text
+			inputBox.ForeColor = Color.White; //Reset the color
 		}
 	}
 }

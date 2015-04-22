@@ -23,6 +23,42 @@ namespace SimpleRPG
 						Items.dumpAllItems();
 						break;
 						
+					case "dbug.dump.items.Armor_Helmet": //Dump Armor_Helmet
+						Items.dumpItems("Armor_Helmet");
+						break;
+						
+					case "dbug.dump.items.Armor_Chest": //Dump Armor_Chest
+						Items.dumpItems("Armor_Chest");
+						break;
+						
+					case "dbug.dump.items.Armor_Legs": //Dump Armor_Legs
+						Items.dumpItems("Armor_Legs");
+						break;
+						
+					case "dbug.dump.items.Weapon_Sword": //Dump Weapon_Sword
+						Items.dumpItems("Weapon_Sword");
+						break;
+						
+					case "dbug.dump.items.Weapon_Staff": //Dump Weapon_Staff
+						Items.dumpItems("Weapon_Staff");
+						break;
+						
+					case "dbug.dump.items.Weapon_Dagger": //Dump Weapon_Dagger
+						Items.dumpItems("Weapon_Dagger");
+						break;
+						
+					case "dbug.dump.items.Abilities_Warrior": //Dump Abilities_Warrior
+						Items.dumpItems("Abilities_Warrior");
+						break;
+						
+					case "dbug.dump.items.Abilities_Mage": //Dump Abilities_Mage
+						Items.dumpItems("Abilities_Mage");
+						break;
+						
+					case "dbug.dump.items.Abilities_Rogue": //Dump Abilities_Rogue
+						Items.dumpItems("Abilities_Rogue");
+						break;
+						
 					case "dbug.color.test": //Test the colors
 						foreach(Color color in new ColorConverter().GetStandardValues())
 						{

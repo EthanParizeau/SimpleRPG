@@ -100,8 +100,6 @@ namespace SimpleRPG
 							MainForm.mainform.playerAgilitylbl.Text = "Agility: " + Convert.ToInt32(MainForm.mainPlayer.Agility).ToString();
 							MainForm.mainform.playerGoldlbl.Text = "Gold: " + Convert.ToInt32(MainForm.mainPlayer.Gold).ToString();
 							
-							//TODO: Fill in inventory
-							
 							string playerInv = rdr["Inventory"].ToString(); //Player inventory in string
 							string[] playerInvItems = playerInv.Split(';'); //Split into easier to deal with bits
 							foreach(string item in playerInvItems) //Put every item into player inventory list

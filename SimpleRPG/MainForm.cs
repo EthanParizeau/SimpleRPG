@@ -18,6 +18,9 @@ namespace SimpleRPG
 		//Player inventory
 		public static BindingList<string> playerInventory = new BindingList<string>();
 		
+		//Player Abilities
+		public static List<string> playerAbilities = new List<string>();
+		
 		//Mainform instance
 		public static MainForm mainform;
 		
@@ -56,6 +59,7 @@ namespace SimpleRPG
 			LoadorCreate loadorcreate = new LoadorCreate(); //Make new instance of loadorcreate
 			loadorcreate.ShowDialog(); //Show it as dialog
 			inputBox.Enabled = true; //Renable the input box
+			inputBox.Focus(); //Set the textbox as focus
 		}
 
 		void InputBoxKeyDown(object sender, KeyEventArgs e)

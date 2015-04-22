@@ -50,6 +50,7 @@ namespace SimpleRPG
 			this.playerInvgroupbox = new System.Windows.Forms.GroupBox();
 			this.playerInvItemDesc = new System.Windows.Forms.RichTextBox();
 			this.playerInventorylistbox = new System.Windows.Forms.ListBox();
+			this.playerInvTiplbl = new System.Windows.Forms.Label();
 			this.playerStatsgroupbox.SuspendLayout();
 			this.playerInvgroupbox.SuspendLayout();
 			this.SuspendLayout();
@@ -232,6 +233,7 @@ namespace SimpleRPG
 			// 
 			this.playerInvgroupbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerInvgroupbox.BackColor = System.Drawing.Color.Black;
+			this.playerInvgroupbox.Controls.Add(this.playerInvTiplbl);
 			this.playerInvgroupbox.Controls.Add(this.playerInvItemDesc);
 			this.playerInvgroupbox.Controls.Add(this.playerInventorylistbox);
 			this.playerInvgroupbox.ForeColor = System.Drawing.Color.White;
@@ -250,7 +252,7 @@ namespace SimpleRPG
 			this.playerInvItemDesc.Location = new System.Drawing.Point(6, 90);
 			this.playerInvItemDesc.Name = "playerInvItemDesc";
 			this.playerInvItemDesc.ReadOnly = true;
-			this.playerInvItemDesc.Size = new System.Drawing.Size(239, 190);
+			this.playerInvItemDesc.Size = new System.Drawing.Size(239, 166);
 			this.playerInvItemDesc.TabIndex = 1;
 			this.playerInvItemDesc.Text = "";
 			// 
@@ -267,6 +269,15 @@ namespace SimpleRPG
 			this.playerInventorylistbox.Size = new System.Drawing.Size(239, 65);
 			this.playerInventorylistbox.TabIndex = 0;
 			this.playerInventorylistbox.SelectedIndexChanged += new System.EventHandler(this.PlayerInventorylistboxSelectedIndexChanged);
+			// 
+			// playerInvTiplbl
+			// 
+			this.playerInvTiplbl.Location = new System.Drawing.Point(6, 259);
+			this.playerInvTiplbl.Name = "playerInvTiplbl";
+			this.playerInvTiplbl.Size = new System.Drawing.Size(239, 23);
+			this.playerInvTiplbl.TabIndex = 2;
+			this.playerInvTiplbl.Text = "1- Means that its equipted 0- Means its not";
+			this.playerInvTiplbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// MainForm
 			// 
@@ -293,6 +304,7 @@ namespace SimpleRPG
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label playerInvTiplbl;
 		private System.Windows.Forms.RichTextBox playerInvItemDesc;
 		public System.Windows.Forms.ListBox playerInventorylistbox;
 		private System.Windows.Forms.GroupBox playerInvgroupbox;

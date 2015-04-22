@@ -64,11 +64,32 @@ namespace SimpleRPG
 					break; //break
 			}
 			
+			switch(playerClass) //Give class abilities and items
+			{
+				case "Warrior": //Warrior
+					newPlayer.Abilities = "Slash;";
+					newPlayer.Inventory = "1-Training sword;1-Leather cowl;1-Leather shirt;1-Leather pants;";
+						
+					break;
+					
+				case "Mage": //Mage 
+					newPlayer.Abilities = "FireBolt;";
+					newPlayer.Inventory = "1-Oak staff;1-Cloth hood;1-Cloth shirt;1-Cloth pants;";
+					
+					break;
+					
+				case "Rogue": //Rogue
+					newPlayer.Abilities = "Backstab;";
+					newPlayer.Inventory = "1-Skinning knife;1-Leather cowl;1-Leather shirt;1-Leather pants;";
+					
+					break;
+			}
+			
 			using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + Startup.globalDatabasePath + ";Version=3;"))
 			{
 				conn.Open(); //Open connection
 				
-				using (SQLiteCommand insertPlayer = new SQLiteCommand("INSERT INTO Characters(Name, Race, Class, Level, XP, Gold, Health, Mana, Strength, Intellect, Defence, Agility, Inventory) VALUES (@Name, @Race, @Class, @Level, @XP, @Gold, @Health, @Mana, @Strength, @Intellect, @Defence, @Agility, @Inventory)", conn))
+				using (SQLiteCommand insertPlayer = new SQLiteCommand("INSERT INTO Characters(Name, Race, Class, Level, XP, Gold, Health, Mana, Strength, Intellect, Defence, Agility, Inventory, Abilities) VALUES (@Name, @Race, @Class, @Level, @XP, @Gold, @Health, @Mana, @Strength, @Intellect, @Defence, @Agility, @Inventory, @Abilities)", conn))
 				{
 					insertPlayer.Parameters.AddWithValue("@Name", newPlayer.Name); 		 	 //Add Name value
 					insertPlayer.Parameters.AddWithValue("@Race", newPlayer.Race); 			 //Add Race value
@@ -83,6 +104,8 @@ namespace SimpleRPG
 					insertPlayer.Parameters.AddWithValue("@Defence", newPlayer.Defence);     //Add Defence value
 					insertPlayer.Parameters.AddWithValue("@Agility", newPlayer.Agility);     //Add Agility value
 					insertPlayer.Parameters.AddWithValue("@Inventory", newPlayer.Inventory); //Add Inventory value
+					insertPlayer.Parameters.AddWithValue("@Abilities", newPlayer.Abilities); //Add Abilities value
+					
 					
 					insertPlayer.ExecuteNonQuery(); //Execute command
 				}

@@ -47,7 +47,8 @@ namespace SimpleRPG
 					              "Intellect INT, " +
 					              "Defence INT, " +
 					              "Agility INT, " +
-					              "Inventory TEXT)");
+					              "Inventory TEXT, " +
+					              "Abilities TEXT)");
 					
 					using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
 					{

@@ -45,5 +45,8 @@ namespace SimpleRPG
 		
 		//Inventory
 		public string Inventory {get; set;}
+		
+		//Abilites
+		public string Abilities {get; set;}
 	}
 }

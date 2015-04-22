@@ -100,6 +100,7 @@ namespace SimpleRPG
 							MainForm.mainform.playerAgilitylbl.Text = "Agility: " + Convert.ToInt32(MainForm.mainPlayer.Agility).ToString();
 							MainForm.mainform.playerGoldlbl.Text = "Gold: " + Convert.ToInt32(MainForm.mainPlayer.Gold).ToString();
 							
+							//Load player inventory
 							string playerInv = rdr["Inventory"].ToString(); //Player inventory in string
 							string[] playerInvItems = playerInv.Split(';'); //Split into easier to deal with bits
 							foreach(string item in playerInvItems) //Put every item into player inventory list
@@ -110,6 +111,17 @@ namespace SimpleRPG
 								}
 							}
 							MainForm.mainform.playerInventorylistbox.DataSource = MainForm.playerInventory;
+							
+							//Load player abilities
+							string playerAbilitesString = rdr["Abilities"].ToString(); //Get string
+							string[] playerAbilites = playerAbilitesString.Split(';'); //Split into easier to deal with bits
+							foreach(string Ability in playerAbilites) //Put every ability into the list
+							{
+								if(!string.IsNullOrEmpty(Ability) && !string.IsNullOrWhiteSpace(Ability))
+								{
+									MainForm.playerAbilities.Add(Ability);
+								}
+							}
 							
 							MainForm.characterLoaded = true; //Set characterloaded to true
 						}

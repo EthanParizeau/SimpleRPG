@@ -2,6 +2,4 @@
 
 GOLDEN RULE: Document everything, and keep it up.
 
-Update race descriptions
-
-Database class for simple database access, like getting all tables
+My ideas for this game have changed over the course of me making it... so now instead of the classic text adventure game im making it more of an ideling game type of deal with rpg elements :)

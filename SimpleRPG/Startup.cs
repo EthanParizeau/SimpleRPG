@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Drawing;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Data.SQLite;
@@ -12,7 +13,7 @@ namespace SimpleRPG
 	public class Startup
 	{
 		public static string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); //Appdata folder
-		public static string appdataGamePath = Path.Combine(appdataPath, "SimpleRPG");
+		public static string appdataGamePath = Path.Combine(appdataPath, "SimpleRPG"); //Combining appdata with the game path
 		public static string globalDatabasePath = Startup.appdataGamePath + "\\Database.sqlite"; //Global database path
 		public static string helptxtdir = Startup.appdataGamePath + "cmdhelp.txt"; //Global helpfile
 		

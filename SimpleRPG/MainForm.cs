@@ -76,6 +76,7 @@ namespace SimpleRPG
 		
 		void PlayerInventorylistboxSelectedIndexChanged(object sender, EventArgs e)
 		{
+			//TODO: Show the description of seleceted item
 			string selectedItem = playerInventorylistbox.Text; //Set selected item to string
 			playerInvItemDesc.Clear(); //Clear the text box
 			playerInvItemDesc.AppendText(selectedItem + " is selected.\n"); //Show what item is selected
@@ -93,6 +94,12 @@ namespace SimpleRPG
 			inputBox.BorderStyle = BorderStyle.None; //Set border style to none so you can't see it
 			inputBox.Clear(); //Clear the text
 			inputBox.ForeColor = Color.White; //Reset the color
+		}
+		
+		void SettingsbtnClick(object sender, EventArgs e)
+		{
+			Settings settings = new Settings();
+			settings.ShowDialog();
 		}
 	}
 }

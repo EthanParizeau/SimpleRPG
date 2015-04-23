@@ -16,3 +16,4 @@ F:\C#\SimpleRPG\SimpleRPG\bin\Debug\System.Data.SQLite.xml
 F:\C#\SimpleRPG\SimpleRPG\obj\Debug\SimpleRPG.MakeCharacter.resources
 F:\C#\SimpleRPG\SimpleRPG\obj\Debug\SimpleRPG.LoadCharacter.resources
 F:\C#\SimpleRPG\SimpleRPG\obj\Debug\SimpleRPG.LoadorCreate.resources
+F:\C#\SimpleRPG\SimpleRPG\obj\Debug\SimpleRPG.Settings.resources

@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Command.cs" />
     <Compile Include="CreateCharacter.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="LoadCharacter.cs" />
     <Compile Include="LoadCharacter.Designer.cs">
@@ -81,6 +82,10 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MakeCharacter.resx">
       <DependentUpon>MakeCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

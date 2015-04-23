@@ -141,6 +141,28 @@ namespace SimpleRPG
 			MainForm.mainform.playerAgilitylbl.Text = "Agility: " + Convert.ToInt32(MainForm.mainPlayer.Agility).ToString();
 			MainForm.mainform.playerGoldlbl.Text = "Gold: " + Convert.ToInt32(MainForm.mainPlayer.Gold).ToString();
 			
+			//Loading the inventory
+			string playerInv = newPlayer.Inventory.ToString(); //Store the inventory in the variable playerInv
+			string[] playerInvItems = playerInv.Split(';'); //Put the items into the array
+			foreach(string item in playerInvItems) //add the items to the list
+			{
+				if(!string.IsNullOrEmpty(item) && !string.IsNullOrWhiteSpace(item))
+				{
+					MainForm.playerInventory.Add(item);
+				}
+			}
+			MainForm.mainform.playerInventorylistbox.DataSource = MainForm.playerInventory;
+			
+			//load player abilities
+			string playerAbilitiesString = newPlayer.Abilities.ToString(); //Store the abilities in a string
+			string[] playerAbilites = playerAbilitiesString.Split(';'); //Split the abilities
+			foreach(string Ability in playerAbilites) //Put every ability into the list
+			{
+				if(!string.IsNullOrEmpty(Ability) && !string.IsNullOrWhiteSpace(Ability))
+				{
+					MainForm.playerAbilities.Add(Ability);
+				}
+			}
 			MainForm.characterLoaded = true; //Set characterloaded to true
 			
 		}

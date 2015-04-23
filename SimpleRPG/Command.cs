@@ -68,6 +68,14 @@ namespace SimpleRPG
 						}
 						break;
 						
+					case "dbug.player.inventory": //Player inventory
+						foreach(string item in MainForm.playerInventory)
+						{
+							MainForm.mainform.outputBox.AppendText("--Inventory--\n");
+							MainForm.mainform.outputBox.AppendText(item.ToString() + "\n");
+						}
+						break;
+						
 					default:
 						MainForm.mainform.outputBox.SelectionColor = Color.Red;
 						MainForm.mainform.outputBox.AppendText("Error! Unknown command " + cmd + "\n");

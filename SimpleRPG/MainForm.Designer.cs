@@ -48,9 +48,10 @@ namespace SimpleRPG
 			this.playerClasslbl = new System.Windows.Forms.Label();
 			this.playerRacelbl = new System.Windows.Forms.Label();
 			this.playerInvgroupbox = new System.Windows.Forms.GroupBox();
+			this.playerInvTiplbl = new System.Windows.Forms.Label();
 			this.playerInvItemDesc = new System.Windows.Forms.RichTextBox();
 			this.playerInventorylistbox = new System.Windows.Forms.ListBox();
-			this.playerInvTiplbl = new System.Windows.Forms.Label();
+			this.settingsbtn = new System.Windows.Forms.Button();
 			this.playerStatsgroupbox.SuspendLayout();
 			this.playerInvgroupbox.SuspendLayout();
 			this.SuspendLayout();
@@ -244,6 +245,15 @@ namespace SimpleRPG
 			this.playerInvgroupbox.TabStop = false;
 			this.playerInvgroupbox.Text = "Inventory";
 			// 
+			// playerInvTiplbl
+			// 
+			this.playerInvTiplbl.Location = new System.Drawing.Point(6, 259);
+			this.playerInvTiplbl.Name = "playerInvTiplbl";
+			this.playerInvTiplbl.Size = new System.Drawing.Size(239, 23);
+			this.playerInvTiplbl.TabIndex = 2;
+			this.playerInvTiplbl.Text = "1- Means that its equipted 0- Means its not";
+			this.playerInvTiplbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// playerInvItemDesc
 			// 
 			this.playerInvItemDesc.BackColor = System.Drawing.Color.Black;
@@ -270,14 +280,19 @@ namespace SimpleRPG
 			this.playerInventorylistbox.TabIndex = 0;
 			this.playerInventorylistbox.SelectedIndexChanged += new System.EventHandler(this.PlayerInventorylistboxSelectedIndexChanged);
 			// 
-			// playerInvTiplbl
+			// settingsbtn
 			// 
-			this.playerInvTiplbl.Location = new System.Drawing.Point(6, 259);
-			this.playerInvTiplbl.Name = "playerInvTiplbl";
-			this.playerInvTiplbl.Size = new System.Drawing.Size(239, 23);
-			this.playerInvTiplbl.TabIndex = 2;
-			this.playerInvTiplbl.Text = "1- Means that its equipted 0- Means its not";
-			this.playerInvTiplbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.settingsbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.settingsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.settingsbtn.ForeColor = System.Drawing.Color.White;
+			this.settingsbtn.Location = new System.Drawing.Point(671, 582);
+			this.settingsbtn.Name = "settingsbtn";
+			this.settingsbtn.Size = new System.Drawing.Size(75, 23);
+			this.settingsbtn.TabIndex = 5;
+			this.settingsbtn.TabStop = false;
+			this.settingsbtn.Text = "Settings";
+			this.settingsbtn.UseVisualStyleBackColor = true;
+			this.settingsbtn.Click += new System.EventHandler(this.SettingsbtnClick);
 			// 
 			// MainForm
 			// 
@@ -286,6 +301,7 @@ namespace SimpleRPG
 			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(764, 608);
 			this.ControlBox = false;
+			this.Controls.Add(this.settingsbtn);
 			this.Controls.Add(this.playerInvgroupbox);
 			this.Controls.Add(this.playerStatsgroupbox);
 			this.Controls.Add(this.outputBox);
@@ -304,6 +320,7 @@ namespace SimpleRPG
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button settingsbtn;
 		private System.Windows.Forms.Label playerInvTiplbl;
 		private System.Windows.Forms.RichTextBox playerInvItemDesc;
 		public System.Windows.Forms.ListBox playerInventorylistbox;

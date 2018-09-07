@@ -94,7 +94,8 @@ namespace SimpleRPG
 			this.classCombobox.Items.AddRange(new object[] {
 									"Warrior",
 									"Mage",
-									"Rogue"});
+									"Rogue",
+                                    "Druid"});
 			this.classCombobox.Location = new System.Drawing.Point(55, 97);
 			this.classCombobox.Name = "classCombobox";
 			this.classCombobox.Size = new System.Drawing.Size(103, 21);

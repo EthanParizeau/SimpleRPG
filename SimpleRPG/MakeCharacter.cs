@@ -97,10 +97,22 @@ namespace SimpleRPG
 					classDesctxtbox.AppendText("Skills: Backstab, Trip"); // Append Rogue skills
 					
 					break; //Break
-					
-				default:
+
+                case "Druid":
+                    //If Druid selected
+                    classDesctxtbox.Clear(); //clear default
+                    classDesctxtbox.AppendText("Description: Earthern warrior that uses nature to deafeat their enemies or heal their friends on the battlefield.\n");
+                    classDesctxtbox.AppendText("Armor:Medium Armor\n");
+                    classDesctxtbox.AppendText("Weapon: Staff or Sword and Shield\n");
+                    classDesctxtbox.AppendText("Skills: Healing Touch, Earth's Wrath\n");
+
+                    break; //Break
+                    
+
+
+                default:
 					//If somehow you got default
-					MessageBox.Show("Not even sure how you got here but close the game of the world might explode!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("Not even sure how you got here but close the game or the world might explode!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					break;
 			}
 		}

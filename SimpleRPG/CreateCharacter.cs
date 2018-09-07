@@ -83,7 +83,14 @@ namespace SimpleRPG
 					newPlayer.Inventory = "1-Skinning knife;1-Leather cowl;1-Leather shirt;1-Leather pants;";
 					
 					break;
-			}
+
+                case "Druid": //Druid
+                    newPlayer.Abilities = "Healing Touch";
+                    newPlayer.Inventory = "Cloth Robe;Wooden Staff;Buckler;Healing Flower";
+                   
+                    break;
+
+			} 
 			
 			using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + Startup.globalDatabasePath + ";Version=3;"))
 			{

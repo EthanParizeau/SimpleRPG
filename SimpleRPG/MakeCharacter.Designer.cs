@@ -77,7 +77,7 @@ namespace SimpleRPG
 			this.characterNamelbl.TabIndex = 2;
 			this.characterNamelbl.Text = "Name:";
 			this.characterNamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			//
+			// 
 			// characterRacelbl
 			// 
 			this.characterRacelbl.ForeColor = System.Drawing.Color.White;
